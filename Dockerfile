@@ -58,5 +58,5 @@ RUN echo "c.NotebookApp.password = u'sha1:6a3f528eec40:6e896b6e4828f525a6e20e541
 # Jupyter listens port: 8888
 EXPOSE 8888
 
-# Run Jupytewr notebook as Docker main process
+# Run Jupyter notebook as Docker main process
 CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/home/debian/notebooks", "--ip='*'", "--port=8888", "--no-browser"]

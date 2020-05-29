@@ -20,6 +20,9 @@ RUN apt -y install sudo
 apt -y install texlive-full
 apt -y install vim
 
+# Add git
+apt -y install git
+
 # Add user Debian with no password, add to sudo group
 RUN adduser --disabled-password --gecos '' debian
 RUN adduser debian sudo

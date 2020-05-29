@@ -1,6 +1,6 @@
 # py-meteo-num
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![](https://images.microbadger.com/badges/image/herholabs/py-meteo-num.svg)](https://microbadger.com/images/herholabs/py-meteo-num "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/herholabs/py-meteo-num.svg)](https://microbadger.com/images/herholabs/py-meteo-num "Get your own version badge on microbadger.com") 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![](https://images.microbadger.com/badges/version/herholabs/py-meteo-num.svg)](https://microbadger.com/images/herholabs/py-meteo-num "Get your own version badge on microbadger.com") 
 
 Docker image for implementing atmospheric science data analysis algorithms using Python 3 inside Jupyter Notebook.
 

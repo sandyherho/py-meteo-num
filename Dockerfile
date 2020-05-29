@@ -1,4 +1,4 @@
-# meteo-num : Docker image for computational atmospheric sciences
+# py-meteo-num : Docker image for computational atmospheric sciences
 # Anti-Copyright (a-c) Sandy Herho (2020).
 # Distributed under the terms of the GNU GPLv3.
 
@@ -15,13 +15,6 @@ RUN apt install -y wget bzip2
 
 # Add sudo
 RUN apt -y install sudo
-
-# Add texlive and vim
-apt -y install texlive-full
-apt -y install vim
-
-# Add git
-apt -y install git
 
 # Add user Debian with no password, add to sudo group
 RUN adduser --disabled-password --gecos '' debian

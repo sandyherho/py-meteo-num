@@ -4,7 +4,7 @@
 
 #### [![DOI](https://zenodo.org/badge/267724851.svg)](https://zenodo.org/badge/latestdoi/267724851)
 
-Docker image for implementing atmospheric science data analysis algorithms using Python 3 inside Jupyter Notebook.
+Debian-based docker image for implementing atmospheric science data analysis algorithms using Python 3 inside Jupyter Notebook.
 
 Users are required to install the docker in advance according to the host operating systems respectively. The guidelines can be obtained through [this site](https://docs.docker.com/engine/install/).
 

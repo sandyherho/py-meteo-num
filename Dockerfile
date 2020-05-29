@@ -47,6 +47,8 @@ RUN conda install -c conda-forge metpy
 RUN conda install -c conda-forge wrf-python
 RUN conda install -c conda-forge siphon
 RUN conda install -c anaconda xarray
+RUN conda install -c pytorch pytorch
+RUN conda install -c conda-forge keras
 
 # Configuring access to Jupyter
 RUN mkdir /home/debian/notebooks

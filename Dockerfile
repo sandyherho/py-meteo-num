@@ -16,6 +16,10 @@ RUN apt install -y wget bzip2
 # Add sudo
 RUN apt -y install sudo
 
+# Add texlive and vim
+apt -y install texlive-full
+apt -y install vim
+
 # Add user Debian with no password, add to sudo group
 RUN adduser --disabled-password --gecos '' debian
 RUN adduser debian sudo

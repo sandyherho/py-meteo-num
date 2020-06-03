@@ -38,9 +38,9 @@ RUN conda update anaconda
 RUN conda update --all
 
 # Installing needed packages for atmospheric science research
-RUN conda install -c anaconda basemap cmocean basemap-data-hires cartopy pydap metpy wrf-python siphon opencv fbprophet --strict-channel-priority
-RUN conda install -c anaconda netcdf4 xarray tensorflow --strict-channel-priority
-RUN conda install -c pytorch pytorch --strict-channel-priority
+RUN conda install -c anaconda basemap cmocean basemap-data-hires cartopy pydap metpy wrf-python siphon opencv fbprophet
+RUN conda install -c anaconda netcdf4 xarray tensorflow
+RUN conda install -c pytorch pytorch
 
 # Configuring access to Jupyter
 RUN mkdir /home/debian/notebooks

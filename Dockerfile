@@ -3,7 +3,7 @@
 # Distributed under the terms of the GNU GPLv3.
 
 # We will use Debian for our image
-FROM debian
+FROM debian:buster-slim
 
 LABEL maintainer="Sandy Hardian Susanto Herho <sandyherho@meteo.itb.ac.id>"
 

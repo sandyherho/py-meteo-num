@@ -7,14 +7,12 @@ FROM debian:buster-slim
 
 LABEL maintainer="Sandy Hardian Susanto Herho <sandyherho@meteo.itb.ac.id>"
 
-# Updating Debian packages
-RUN apt update && yes|apt upgrade
+# Updating Debian packages - Adding wget and bzip2 - Adding sudo - Adding git
+RUN apt update && yes|apt upgrade && \
+    apt install -y wget bzip2 && \
+    apt -y install sudo
+    apt install -y git
 
-# Adding wget and bzip2
-RUN apt install -y wget bzip2
-
-# Add sudo
-RUN apt -y install sudo
 
 # Add user Debian with no password, add to sudo group
 RUN adduser --disabled-password --gecos '' debian && \

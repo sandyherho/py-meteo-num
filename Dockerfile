@@ -1,5 +1,5 @@
-# py-meteo-num : Docker image for computational atmospheric sciences
-# Anti-Copyright (a-c) Sandy Herho & Dasapta Erwin Irawan (2020).
+# py-meteo-num : Docker image for weather and climate data analysis
+# Anti-Copyright (a-c) Sandy Herho (2020).
 # Distributed under the terms of the GNU GPLv3.
 
 # We will use Debian 10 (Buster) for our image
@@ -10,13 +10,13 @@ LABEL maintainer="Sandy Hardian Susanto Herho <sandyherho@meteo.itb.ac.id>"
 # Updating Debian packages
 RUN apt update && yes|apt upgrade
 
-# Adding wget, git, and bzip2
-RUN apt install -y wget git bzip2
+# Adding wget and bzip2
+RUN apt install -y wget bzip2
 
 # Add sudo
 RUN apt -y install sudo
 
-# Add user Debian with no password, add to sudo group
+# Add user debian with no password, add to sudo group
 RUN adduser --disabled-password --gecos '' debian && \
     adduser debian sudo && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
@@ -54,3 +54,4 @@ EXPOSE 8888
 
 # Run Jupyter notebook as Docker main process
 CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/home/debian/notebooks", "--ip='*'", "--port=8888", "--no-browser"]
+Explore

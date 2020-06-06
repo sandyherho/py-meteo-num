@@ -1,4 +1,4 @@
-# py-meteo-num : Docker image for weather and climate data analysis
+# py-meteo-num : Docker image for computational atmospheric sciences
 # Anti-Copyright (a-c) Sandy Herho (2020).
 # Distributed under the terms of the GNU GPLv3.
 
@@ -16,7 +16,7 @@ RUN apt install -y wget bzip2
 # Add sudo
 RUN apt -y install sudo
 
-# Add user debian with no password, add to sudo group
+# Add user Debian with no password, add to sudo group
 RUN adduser --disabled-password --gecos '' debian && \
     adduser debian sudo && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
@@ -54,4 +54,3 @@ EXPOSE 8888
 
 # Run Jupyter notebook as Docker main process
 CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/home/debian/notebooks", "--ip='*'", "--port=8888", "--no-browser"]
-Explore

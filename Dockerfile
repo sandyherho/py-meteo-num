@@ -7,9 +7,11 @@ FROM debian:buster-slim
 
 LABEL maintainer="Sandy Hardian Susanto Herho <sandyherho@meteo.itb.ac.id>"
 
-# Updating Debian packages - Adding wget and bzip2 - Adding sudo - Adding git
-RUN apt update && yes|apt upgrade && \
-    apt install -y wget bzip2 && \
+# Updating Debian packages
+RUN apt update && yes|apt upgrade
+
+# Adding wget and bzip2 - Adding sudo - Adding git
+RUN apt install -y wget bzip2 && \
     apt -y install sudo
     apt install -y git
 

@@ -39,8 +39,7 @@ RUN conda update conda && \
 
 # Installing needed packages for atmospheric science research
 RUN conda install -c conda-forge basemap cmocean basemap-data-hires cartopy \
-    pydap metpy wrf-python siphon opencv fbprophet ctd pymc3 pygrib
-    paegan iris mpld3 owslib gsw cbsyst climlab \
+    pydap metpy wrf-python siphon opencv fbprophet ctd pymc3 pygrib paegan iris mpld3 owslib gsw cbsyst climlab \
     xclim cdsapi cdo windspharm sunpy cdsapi&& \
     conda install -c anaconda netcdf4 xarray tensorflow && \
     conda install -c pytorch pytorch && \

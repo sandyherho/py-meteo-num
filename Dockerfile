@@ -1,5 +1,5 @@
 # py-meteo-num : Docker image for computational atmospheric sciences
-# Anti-Copyright (a-c) Sandy Herho and  Dasapta Erwin Irawan (2020).
+# Anti-Copyright (a-c) Sandy Herho and Dasapta Erwin Irawan (2020).
 # Distributed under the terms of the GNU GPLv3.
 
 # We will use Debian 10 (Buster) for our image
@@ -39,12 +39,10 @@ RUN conda update conda && \
 
 # Installing needed packages for atmospheric science research
 RUN conda install -c conda-forge basemap cmocean basemap-data-hires cartopy \
-    pydap metpy wrf-python siphon opencv fbprophet ctd pymc3 pygrib paegan iris mpld3 owslib gsw cbsyst climlab \
-    xclim cdsapi cdo windspharm sunpy cdsapi&& \
+    pydap metpy wrf-python siphon opencv fbprophet ctd pymc3 pygrib windspharm \
+    paegan iris mpld3 owslib gsw cbsyst climlab xclim cdsapi cdo && \
     conda install -c anaconda netcdf4 xarray tensorflow && \
-    conda install -c pytorch pytorch && \
-    conda install -c sharppy sharppy && \
-    conda install -c pvlib pvlib
+    conda install -c pytorch pytorch
 
 # Configuring access to Jupyter
 RUN mkdir /home/debian/notebooks && \
